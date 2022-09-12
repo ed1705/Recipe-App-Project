@@ -1,0 +1,22 @@
+{
+  "name": "final-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "cd server && npm start",
+    "dev": "export NODE_ENV=development",
+    "prod": "export NODE_ENV=production",
+    "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i --legacy-peer-deps && cd ../client && npm i --legacy-peer-deps",
+    "heroku-postbuild": "cd client && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "fuse": "^0.4.0",
+    "if-env": "^1.0.4"
+  }
+}
